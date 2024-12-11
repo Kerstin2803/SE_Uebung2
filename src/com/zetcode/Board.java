@@ -22,7 +22,7 @@ public class Board extends JPanel implements ActionListener {
     private final int DOT_SIZE = 10;
     private final int ALL_DOTS = 900;
     private final int RAND_POS = 29;
-    private final int DELAY = 140;
+    private final int game_loop_duration_in_ms = 140;
 
     private final int x[] = new int[ALL_DOTS];
     private final int y[] = new int[ALL_DOTS];
@@ -81,7 +81,7 @@ public class Board extends JPanel implements ActionListener {
         
         locateApple();
 
-        timer = new Timer(DELAY, this);
+        timer = new Timer(game_loop_duration_in_ms, this);
         timer.start();
     }
 
